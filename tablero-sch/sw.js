@@ -1,5 +1,5 @@
 /* Tablero SCH — shell offline, JSON siempre de red. */
-var CACHE = "tablero-sch-v3";
+var CACHE = "tablero-sch-v4";
 var SHELL = [
   "./",
   "./index.html",
@@ -30,7 +30,7 @@ self.addEventListener("activate", function (event) {
 });
 
 function isDayJson(url) {
-  return /\/acciones\.json$/.test(url.pathname) || /\/sourcing\.json$/.test(url.pathname) || /\/leads\.json$/.test(url.pathname);
+  return /\/(acciones|sourcing|leads|dashboard)\.json$/.test(url.pathname);
 }
 
 self.addEventListener("fetch", function (event) {

@@ -183,6 +183,6 @@ GitHub Pages tiene que servir la rama `main`, carpeta `/` (root). Hace falta el 
 
 No hay workflow de Actions: la fuente pedida es la rama, no GitHub Actions.
 
-Para instalarla en el teléfono: abrir la URL → Agregar a pantalla de inicio. El ícono es MH en amarillo `#F5B800` sobre negro `#111111`.
+Para instalarla en el teléfono: abrir la URL → Agregar a pantalla de inicio. El ícono es MH en blanco sobre azul `#134a88`, con una franja naranja `#f18c26`.
 
 Sin red, la cáscara puede abrir desde el service worker, pero `acciones.json`, `leads.json` y `sourcing.json` no se sirven desde caché. Lo ya guardado en el teléfono sigue ahí.

@@ -1,5 +1,5 @@
 /* Tablero SCH — shell offline, JSON siempre de red. */
-var CACHE = "tablero-sch-v2";
+var CACHE = "tablero-sch-v3";
 var SHELL = [
   "./",
   "./index.html",

@@ -1,0 +1,130 @@
+{
+  "fecha": "2026-11-26",
+  "titulo_fecha": "Jueves 26 de noviembre",
+  "acciones": [
+    {
+      "id": "b1",
+      "prioridad": "rojo",
+      "cliente": "Oscar Ángeles",
+      "unidad": "MH-91317 · National 600E 20 t",
+      "accion": "Recíbelo en patio con la unidad lista y avisa a Gabriel al llegar.",
+      "contexto": "Está en Negociación y a las 11:26 dijo “ya casi”."
+    },
+    {
+      "id": "b2",
+      "prioridad": "rojo",
+      "cliente": "Jesús Velázquez",
+      "unidad": "MH-91315 · Hiab 322E-5 (patio Juárez)",
+      "accion": "Ponle fecha para apartar la unidad: día, monto y forma de pago.",
+      "contexto": "La negociación ya está aprobada tal como se la mandaste ($93k con flete)."
+    },
+    {
+      "id": "b3",
+      "prioridad": "rojo",
+      "cliente": "Elian",
+      "unidad": "Unidad en cierre",
+      "accion": "Márcale hoy; si no contesta, mándale un mensaje para reagendar la llamada.",
+      "contexto": "Está en cierre y la llamada de las 11:00 no quedó registrada."
+    },
+    {
+      "id": "b4",
+      "prioridad": "ambar",
+      "cliente": "Agregados Montebello",
+      "unidad": "MH-91360 · CAT 320CL",
+      "accion": "Mándale el precio puesto en Tuxtla Gutiérrez, aunque no te haya dado su nombre.",
+      "contexto": "Lo pidió dos veces y llegó por la página."
+    },
+    {
+      "id": "b5",
+      "prioridad": "ambar",
+      "cliente": "José Julián Mijares",
+      "unidad": "Articulada 18-22 m · Ecatepec",
+      "accion": "Llámale y ten lista una alternativa a la MH-91315.",
+      "contexto": "Quedaron de hablar ayer; tu mensaje de las 10:55 sigue sin respuesta."
+    },
+    {
+      "id": "b6",
+      "prioridad": "ambar",
+      "cliente": "Leopoldo Morales",
+      "unidad": "Grúa de 10 t",
+      "accion": "Ten lista una opción y escríbele en cuanto Carel defina la MH-91315; no le menciones la MH-91363.",
+      "contexto": "Lleva desde el 24/11 sin noticias nuestras."
+    },
+    {
+      "id": "b7",
+      "prioridad": "ambar",
+      "cliente": "Jorge A.",
+      "unidad": "Mini excavadora · ~$400k MXN · Tecate",
+      "accion": "Mándale las 2 opciones que le prometimos.",
+      "contexto": "Las está esperando desde el 23/11."
+    },
+    {
+      "id": "b8",
+      "prioridad": "verde",
+      "cliente": "Luis Cor",
+      "unidad": "MH-91284 · Manitex 25 t",
+      "accion": "Confirma con inventario si la MH-91284 sigue disponible y mándale ficha y precio puesto en CDMX con factura (o una alternativa).",
+      "contexto": "Preguntó el 11/11 y sigue esperando respuesta."
+    },
+    {
+      "id": "b9",
+      "prioridad": "verde",
+      "cliente": "Víctor Ríos Zaragoza",
+      "unidad": "Grúa de plataforma + wheel lift · Guadalajara",
+      "accion": "Mándale las opciones que está buscando Josué.",
+      "contexto": "Le dijiste que estás buscando; dale una respuesta hoy."
+    },
+    {
+      "id": "b10",
+      "prioridad": "verde",
+      "cliente": "Ricardo Martín · Osbaldo · Víctor Martínez · Héctor",
+      "unidad": "Grúas (capacidad por confirmar)",
+      "accion": "En cuanto te contesten la capacidad, mándales opciones.",
+      "contexto": "A Ricardo le prometimos otras opciones."
+    },
+    {
+      "id": "b11",
+      "prioridad": "verde",
+      "cliente": "Antonio Escobar",
+      "unidad": "Equipo en seguimiento",
+      "accion": "Vuelve a marcarle por la tarde.",
+      "contexto": "Pidió llamada hoy y no ha contestado."
+    },
+    {
+      "id": "b12",
+      "prioridad": "verde",
+      "cliente": "Andrés Lpz · Alberto",
+      "unidad": "Grúa ~4 t · rotomartillo",
+      "accion": "Contéstales: opciones de ~4 t para Andrés; a Alberto, si manejamos esa refacción.",
+      "contexto": "Siguen sin respuesta nuestra."
+    }
+  ],
+  "ojo": [
+    {
+      "titulo": "MH-91315:",
+      "texto": "no la ofrezcas ni la confirmes a nadie más hasta que Carel defina de quién es (Jesús, Leopoldo o José Julián)."
+    },
+    {
+      "titulo": "MH-91363 está reservada:",
+      "texto": "no se la ofrezcas a nadie."
+    },
+    {
+      "titulo": "MH-91317:",
+      "texto": "antes de que llegue Oscar, confirma con Ventas que sigue libre (también tienen a un cliente interesado en una titán de 20 t)."
+    },
+    {
+      "titulo": "MH-91309",
+      "texto": "ya no aparece en la página: confírmala antes de cotizarla."
+    }
+  ],
+  "otros": [
+    {
+      "quien": "Gabriel",
+      "texto": "recibir a Oscar contigo · Checo Suárez (estatus de entrega y pagos) · cliente de Altamira (CAT 336/340 + D-10) · Israel Pérez (titán 30-40 t)"
+    },
+    {
+      "quien": "Carel",
+      "texto": "definir la MH-91315 · asignar a Francisco Ángel Gil (articulada 20 t), Hernán Echamea (MH-91312) y Luis Jiménez (CNC a Xalapa)"
+    }
+  ]
+}

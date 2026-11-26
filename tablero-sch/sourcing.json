@@ -1,0 +1,136 @@
+{
+  "solicitudes": [
+    {
+      "id": "s1",
+      "cliente": "Valentina",
+      "equipo": "Telehandler",
+      "capacidad": "6 TON",
+      "estatus_solicitud": "Solicitado",
+      "comprador": "Josue",
+      "estatus_recepcion": "",
+      "estatus_cliente": "Pendiente",
+      "comentarios": ""
+    },
+    {
+      "id": "s2",
+      "cliente": "Iván Arevalo",
+      "equipo": "Grúa Articulada",
+      "capacidad": "6 - 8 ton",
+      "estatus_solicitud": "Pendiente",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "Enviado",
+      "comentarios": "encontré y mande de websourcing porque no me enviaba sourcing"
+    },
+    {
+      "id": "s3",
+      "cliente": "Luis Aragon",
+      "equipo": "TITAN",
+      "capacidad": "20 TON",
+      "estatus_solicitud": "Solicitado",
+      "comprador": "",
+      "estatus_recepcion": "Pendiente",
+      "estatus_cliente": "Pendiente",
+      "comentarios": ""
+    },
+    {
+      "id": "s4",
+      "cliente": "Felipe Espinoza Castro",
+      "equipo": "Grúa Articulada",
+      "capacidad": "18 ton",
+      "estatus_solicitud": "Enviado",
+      "comprador": "Josue",
+      "estatus_recepcion": "Recibido",
+      "estatus_cliente": "Enviado",
+      "comentarios": "me mandaron una de 27 y una de 14 ton"
+    },
+    {
+      "id": "s5",
+      "cliente": "Salvador",
+      "equipo": "Grúa Articulada",
+      "capacidad": "5 - 7 ton",
+      "estatus_solicitud": "",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "",
+      "comentarios": "Yo busque y le envié de websourcing"
+    },
+    {
+      "id": "s6",
+      "cliente": "Alejandro Torres",
+      "equipo": "Yucle",
+      "capacidad": "",
+      "estatus_solicitud": "Enviado",
+      "comprador": "Josue",
+      "estatus_recepcion": "Recibido",
+      "estatus_cliente": "Enviado",
+      "comentarios": ""
+    },
+    {
+      "id": "s7",
+      "cliente": "Oscar Angeles Mtz",
+      "equipo": "Titán",
+      "capacidad": "16 - 20 ton",
+      "estatus_solicitud": "Enviado",
+      "comprador": "Josue",
+      "estatus_recepcion": "Recibido",
+      "estatus_cliente": "Enviado",
+      "comentarios": ""
+    },
+    {
+      "id": "s8",
+      "cliente": "Ramón Rodríguez",
+      "equipo": "Grúa Articulada",
+      "capacidad": "19 Ton",
+      "estatus_solicitud": "Pendiente",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "Enviado",
+      "comentarios": "le mandé de momento una de 14 ton pero ya no contesta"
+    },
+    {
+      "id": "s9",
+      "cliente": "Ramón Rodríguez",
+      "equipo": "Elevador Telescopico",
+      "capacidad": "11 mts",
+      "estatus_solicitud": "Pendiente",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "",
+      "comentarios": ""
+    },
+    {
+      "id": "s10",
+      "cliente": "Armando Avila",
+      "equipo": "Titán",
+      "capacidad": "29-35 ton",
+      "estatus_solicitud": "Pendiente",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "Enviado",
+      "comentarios": "encontré en websourcing y envié"
+    },
+    {
+      "id": "s11",
+      "cliente": "Hernan David",
+      "equipo": "Grúa arrastre plataforma",
+      "capacidad": "5 -10 ton",
+      "estatus_solicitud": "Enviado",
+      "comprador": "Josue",
+      "estatus_recepcion": "Pendiente",
+      "estatus_cliente": "Pendiente",
+      "comentarios": "anexó fotos"
+    },
+    {
+      "id": "s12",
+      "cliente": "Alejandro Fernandez Ballesteros",
+      "equipo": "Grúa Titán",
+      "capacidad": "35 ton",
+      "estatus_solicitud": "Pendiente",
+      "comprador": "",
+      "estatus_recepcion": "",
+      "estatus_cliente": "",
+      "comentarios": "encontre una de 38 en websourcing y la mostré"
+    }
+  ]
+}

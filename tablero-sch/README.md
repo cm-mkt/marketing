@@ -1,6 +1,6 @@
 # Tablero SCH · Cinthya
 
-Página de uso diario (móvil): acciones del día, leads y solicitudes de sourcing. La URL prevista es:
+Página de uso diario (móvil): acciones del día, dashboard semanal, leads y solicitudes de sourcing. La URL prevista es:
 
 https://cm-mkt.github.io/marketing/tablero-sch/
 
@@ -166,6 +166,18 @@ CLIENTE,EQUIPO,CAPACIDAD,ESTATUS DE SOLICITUD,COMPRADOR,ESTATUS DE RECEPCIÓN,ES
 
 El corte del día junta acciones, sourcing (conteos y filas tocadas hoy) y leads (llamadas hechas, mensajes enviados, movidos a no oportunidad y comentarios nuevos de ese `fecha`).
 
+## Dashboard semanal
+
+`tablero-sch/dashboard.json` lo reemplaza un trabajo aparte **cada viernes**. La pestaña Dashboard lo pide con `fetch`, `cache: "no-store"` y `?t=`, igual que `acciones.json` y `leads.json`. El service worker no lo guarda: si hay red, siempre llega el archivo nuevo.
+
+Si un campo viene `null`, la pantalla muestra `—` o `por medir` (por ejemplo una táctica que todavía no se midió).
+
+El archivo trae `generado`, `semana` (`inicio`, `fin`, `etiqueta`), `periodo_total`, `kpis[]` (`id`, `label`, `valor`, `unidad` `MXN` | `%` | `h` | conteo, `delta_vs_semana_anterior`, `nota`), `embudo[]`, `tacticas[]` (`enviados`, `respondieron`, `tasa`, `mediana_respuesta_h`, `veredicto` `funcionó` | `no funcionó` | `probar más`), `leads_por_dia[]` (`fecha`, `op`, `d`, `total`), `tiempo_respuesta_buckets[]`, `por_fuente[]`, `bitacora[]`, `aprendizajes[]` y `propuestas[]` (`texto`, `estado`).
+
+La mediana de primera respuesta pinta el delta negativo en verde (bajar horas es mejor). El resto de los deltas: subir es verde y bajar es rojo. **Copiar resumen** arma un texto plano con KPIs, tácticas y aprendizajes para WhatsApp.
+
+Acciones sigue siendo la pestaña que abre la página.
+
 ## Guardado en el teléfono
 
 | Clave | Contenido |
@@ -185,4 +197,4 @@ No hay workflow de Actions: la fuente pedida es la rama, no GitHub Actions.
 
 Para instalarla en el teléfono: abrir la URL → Agregar a pantalla de inicio. El ícono es MH en blanco sobre azul `#134a88`, con una franja naranja `#f18c26`.
 
-Sin red, la cáscara puede abrir desde el service worker, pero `acciones.json`, `leads.json` y `sourcing.json` no se sirven desde caché. Lo ya guardado en el teléfono sigue ahí.
+Sin red, la cáscara puede abrir desde el service worker, pero `acciones.json`, `leads.json`, `sourcing.json` y `dashboard.json` no se sirven desde caché. Los gráficos del dashboard van en la página (SVG), sin librerías externas. Lo ya guardado en el teléfono sigue ahí.

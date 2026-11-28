@@ -61,6 +61,8 @@ Mismo esquema de siempre (`fecha`, `titulo_fecha`, `acciones[]`, `ojo[]`, `otros
 | `acciones[].mensaje` | Texto listo para copiar, o `""`. Los corchetes `[precio confirmado]` se llenan antes de enviar. |
 | `acciones[].video` | Solo en `video_personalizado`: qué debe decir o mostrar el video. Si no, `""`. |
 | `acciones[].lead_id` | `id` en `leads.json`. `""` si la acción agrupa a varios leads o el lead no entró por el agente desde el 5/11. |
+| `acciones[].enlaces_internos` | Opcional. Arreglo `[{ "label", "url" }]` con enlaces solo para el equipo (p. ej. equipos a cotizar). Se ven como enlaces en un recuadro punteado marcado 🔒 y **no** entran en `mensaje` ni en el texto para copiar. Solo se muestran URLs `http(s)`. |
+| `acciones[].enlaces_internos_titulo` | Opcional. Título de ese recuadro. Si falta: «Enlaces internos (no para el cliente)». |
 | `ojo[]` | Avisos. `titulo` sale en negrita; `texto` es el resto. También se acepta un string. |
 | `otros[]` | «Lo que mueven otros». `quien` es la persona; `texto` es el resto. También se acepta un string. |
 
@@ -88,6 +90,8 @@ La página pide este archivo con `fetch` y `cache: "no-store"`, más una query `
 | `fuente` | `web` \| `campaña` \| `facebook` \| `orgánico` \| `""` | `web` incluye los saludos genéricos del botón del sitio. |
 | `ultimo_mensaje` | objeto | `{ quien: lead\|agente\|nosotros\|"", hace: "3 h" \| "2 d", resumen }`. `resumen` máx. 100 caracteres. Los videos se marcan `[video general de bienvenida]` o `[video personalizado]`. |
 | `siguiente_accion` | objeto | `{ tipo, prioridad, por_que, mensaje }`. `tipo` usa el mismo enum que las acciones. `prioridad`: `rojo`, `ambar`, `verde`. `mensaje` es texto para WhatsApp o `""`. |
+| `enlaces_internos` | arreglo | Opcional. Igual que en `acciones.json`: `[{ label, url }]`, internos, no para el cliente. |
+| `enlaces_internos_titulo` | texto | Opcional. Título del recuadro de enlaces internos. |
 | `comentario_previo` | string | COMENTARIOS de la hoja. Si hubo reentradas, se unen con ` \| `. |
 | `llamar` | bool | La hoja tenía X en Marcar. |
 | `no_oportunidad` | bool | Etapa SCH No oportunidad, o fila en rojo en la hoja. |

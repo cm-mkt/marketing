@@ -46,6 +46,9 @@ h1{font-size:23px;font-weight:800;margin-top:6px;line-height:1.15}
 .unit{font-size:13px;color:#555;font-weight:600;width:100%}
 .act{font-size:16px;margin-top:6px;font-weight:600}
 .why{font-size:14px;color:#666;margin-top:4px}
+.ilinks{margin-top:8px;padding:8px 10px;border:2px dashed #1f4e78;border-radius:10px;background:#eef3f9}
+.ilinks .ilt{font-size:12px;font-weight:800;color:#1f4e78;letter-spacing:.3px}
+.ilinks a{display:block;font-size:14px;font-weight:700;color:#134a88;margin-top:6px;word-break:break-word}
 .seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:10px}
 .seg button{min-height:46px;border-radius:10px;border:2px solid #ddd;background:#fafafa;font-size:14px;font-weight:700;color:#444;cursor:pointer;padding:4px}
 .seg button.on.p{background:#eee;border-color:#888;color:#111}
@@ -366,7 +369,8 @@ function all(){return BASE.concat(S.extras||[]);}
 function persistToday(){if(!DAY)return;S.meta={fecha:DAY,titulo_fecha:TITULO};S.snapshot=all().map(function(it){return {id:it.id,c:it.c,cli:it.cli,unit:it.unit||"",act:it.act,why:it.why||"",extra:!!it.extra,tipo:it.tipo||"",mensaje:it.mensaje||"",video:it.video||""};});writeState(DAY,S);}
 function saveFecha(fecha){if(fecha===DAY)persistToday();else writeState(fecha,stateBag(fecha));}
 
-function normAcc(a){return {id:String(a.id||""),c:PRIO[a.prioridad]||"g",cli:a.cliente||"",unit:a.unidad||"",act:a.accion||"",why:a.contexto||"",tipo:a.tipo||"",mensaje:a.mensaje||"",video:a.video||"",lead_id:a.lead_id||""};}
+function normAcc(a){return {id:String(a.id||""),c:PRIO[a.prioridad]||"g",cli:a.cliente||"",unit:a.unidad||"",act:a.accion||"",why:a.contexto||"",tipo:a.tipo||"",mensaje:a.mensaje||"",video:a.video||"",lead_id:a.lead_id||"",links:a.enlaces_internos||[],ltit:a.enlaces_internos_titulo||""};}
+function linksBox(arr,tit){if(!arr||!arr.length)return"";var o="";arr.forEach(function(l){var u=String((l&&l.url)||"");if(!/^https?:\/\//i.test(u))return;o+='<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">🔗 '+esc((l&&l.label)||u)+"</a>";});if(!o)return"";return '<div class="ilinks"><div class="ilt">🔒 '+esc(tit||"Enlaces internos (no para el cliente)")+"</div>"+o+"</div>";}
 function tipoBadge(tipo){var t=TIPO[tipo];if(!t)return "";return '<span class="tbadge">'+t[0]+" "+esc(t[1])+"</span>";}
 function hilite(text){var re=/\[[^\]\n]+\]/g,out="",i=0,m;while((m=re.exec(text))){out+=esc(text.slice(i,m.index))+'<mark>'+esc(m[0])+'</mark>';i=m.index+m[0].length;}return out+esc(text.slice(i));}
 function msgBox(text,attr,id){if(!text)return "";var warn=/\[[^\]\n]+\]/.test(text);var h='<div class="msgbox"><div class="msgtext">'+hilite(text)+'</div>';if(warn)h+='<div class="msgwarn">⚠️ Llena los datos entre corchetes antes de enviar</div>';h+='<button type="button" class="btn y" '+attr+'="'+esc(id)+'">Copiar mensaje</button></div>';return h;}
@@ -395,6 +399,7 @@ function cardHtml(it,x,i,fecha){var fattr=fecha?' data-fecha="'+esc(fecha)+'"':"
   if(it.unit)h+='<span class="unit">'+esc(it.unit)+'</span>';
   h+='</div>'+tipoBadge(it.tipo)+'<div class="act">'+esc(it.act)+'</div>';
   if(it.why)h+='<div class="why">'+esc(it.why)+'</div>';
+  h+=linksBox(it.links,it.ltit);
   h+=msgBox(it.mensaje,"data-copy",it.id)+videoBox(it.video);
   h+='<div class="seg" role="group" aria-label="Estatus">'+
     '<button type="button" class="p'+(x.s==="p"?" on":"")+'" data-s="p">⏳ Pendiente</button>'+
@@ -490,6 +495,7 @@ function leadCard(ld){var s=leadState(ld.id,false),sa=saOf(ld),um=ld.ultimo_mens
   if(um.resumen||um.quien||um.hace){var who=QUIEN[um.quien]||um.quien||"";var when=um.hace?("hace "+um.hace):"";h+='<div class="why"><b>Último mensaje</b>'+(who||when?" · "+esc([who,when].filter(Boolean).join(" · ")):"")+'<br>'+esc(um.resumen||"")+'</div>';}
   if(sa.tipo)h+=tipoBadge(sa.tipo);
   if(sa.por_que)h+='<div class="why">'+esc(sa.por_que)+'</div>';
+  h+=linksBox(ld.enlaces_internos,ld.enlaces_internos_titulo);
   h+=msgBox(sa.mensaje,"data-copy-lead",ld.id);
   if(ld.comentario_previo)h+='<div class="prevcom"><b>Comentario previo.</b> '+esc(ld.comentario_previo)+'</div>';
   h+='<div class="flabel">Mi comentario</div><textarea class="note" rows="2" maxlength="500" data-lnote="'+esc(ld.id)+'" placeholder="Solo en este teléfono">'+esc(s.comentario||"")+'</textarea>';
